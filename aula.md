@@ -5,7 +5,7 @@
 Maneira de dar intruções ao computador
 Como um lego, você irá utilizar peças para criar algorítmos, ou seja, para resovlver problemas.
 
-> ## Algorítmo##: Sequencia de passos lófica e finita para resolução de um problema.
+> ## Algorítmo##: Sequencia de passos lógica e finita para resolução de um problema.
 
 ## Peças de uma linguagem
 
@@ -25,10 +25,25 @@ Como um lego, você irá utilizar peças para criar algorítmos, ou seja, para r
 
 ## Tipos e dados
 
-- Strings (TEXTOS): "" '' `` (crase) 
-- Number: 2 3.2 ...
-- Function
+[x]Strings (TEXTOS): "" '' `` (crase) 
+[x]Number: 2 3.2 ...
+[x]Boolean (true ou false)
 
 ## Operadores
 
-Operador de atribuição de valor = 
+[x]Operador de atribuição de valor = 
+[x]Operador de contatenação +
+
+## Arrays:
+
+[x]Uma lista que contem qualquer tipo de dado
+
+## Objetos: 
+[x] Atributos e métodos
+[x]Criação e manipulação de objetos
+ACesso a propriedades de objetos
+
+## Function
+[x]Criar, passar argumento
+[x]Executar
+[x]Arrow funcion / named funtion
