@@ -9,7 +9,7 @@ Como um lego, você irá utilizar peças para criar algorítmos, ou seja, para r
 
 ## Peças de uma linguagem
 
-- Comentários
+- [x] Comentários //
 - Declaraçã de variáveis (const, let)
 - Operadores (atribuição, concentração, matemáticos, lógicos)
 - Tipos de dados (string, number, boolean)
@@ -19,6 +19,16 @@ Como um lego, você irá utilizar peças para criar algorítmos, ou seja, para r
 
 ## Fases da resolução de um problema
 
--Coletar os dados
+- Coletar os dados da função log "hello world!"
 - Processar as informações (manipular, alterar, gerenciar...)
 - Apresentar dados
+
+## Tipos e dados
+
+- Strings (TEXTOS): "" '' `` (crase) 
+- Number: 2 3.2 ...
+- Function
+
+## Operadores
+
+Operador de atribuição de valor = 
