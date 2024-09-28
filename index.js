@@ -1,10 +1,21 @@
 const start = () => {
-    let count = 1
-    while(count <= 10) {
-        console.log(count)
-        count = count + 1
+
+        while(true){ //fica na opcao pra sempre, infinito pq e sempre verdadeiro
+            let opcao = "Cadastrar" 
+            switch(opcao) {
+                case "Cadastrar":
+                    console.log("Vamos cadastrar")
+                    break
+                case "Listar":
+                    console.log("Vamos listar")
+                    break
+                case "Sair":
+                    return
+
+            }
+        }
     }
-}
+
 
 start()
 
