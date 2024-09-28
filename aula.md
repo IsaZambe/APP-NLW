@@ -47,3 +47,6 @@ ACesso a propriedades de objetos
 [x]Criar, passar argumento
 [x]Executar
 [x]Arrow funcion / named funtion
+
+## Estrutura de repetição
+- [x] Estrutura while

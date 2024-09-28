@@ -1,16 +1,41 @@
-// array, objetos
-let meta = {
-    value: 'Ler um livro por mês',
-    checked: true,
+const start = () => {
+    let count = 1
+    while(count <= 10) {
+        console.log(count)
+        count = count + 1
+    }
 }
 
-let metas = [
-    meta,
-    {
-    value: 'Tomar os remédios pela manhã',
-    checked: false,
-}
-]
+start()
 
-console.log(metas[0].value) // console.log(meta.value) igual
-//console.log(metas[1].value) -> tomar os remédios
+//function start() {
+    //console.log('comecou')
+//}
+
+//start()
+// ou função arrow
+//const start = () => { 
+    // console.log('comecou')
+//}
+
+//start()
+
+//const start = () => { 
+    // while(true).(
+       //console.log('comecou')
+       //return (para a função)
+//}
+
+//start()
+
+//const start = () => { 
+    //let count = 0
+    //while(count < 10){
+    // console.log(count)
+    //count = count + 1 (vai contar 10 vezes pq volta sempre pro count ate não ser mais menos que 10)
+    //pode tambem ser <= 1 que vai contar ate o 10
+        //}
+//}
+
+//start()
+
