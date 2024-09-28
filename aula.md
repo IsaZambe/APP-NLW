@@ -54,3 +54,14 @@ ACesso a propriedades de objetos
 ## Condicionais
 
 - [x] Switch (condicionais)
+
+## Modulos em node js
+
+- [x] Importação de modulos (require, CommonsJS)
+- [x] Bibloiteca 'inquirer' para criar prompts interativos
+
+
+## Programação assíncronas (async/await) e Promessas
+- sempre que usar await ele aguarda, a funcao se chama promessa (volta com uma resposta)
+- await espera o usuario escolher uma opcao
+- Assincrona pq para pra esperar o usuario selecionar, n sincrinizada (linha por linha)
