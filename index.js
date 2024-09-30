@@ -65,6 +65,27 @@ const metasRealizadas = async () => {
         choices: [...realizadas]
     })
 }
+
+const metasAbertas = async () => {
+    const abertas = metas.filter((meta) => {
+        return meta.checked != true // return !meta.checked (no boleano muda o sig da frase)
+    }) //esse return esta dentro da funcao do filter, a const async n sabe que ela existe
+
+    if(abertas.length == 0) {
+        console.log("Não existem metas abertas :)")
+        return  
+    }
+
+    await select({
+        message: "Metas Abertas " + abertas.length,
+        choices: [...abertas]
+    })
+}
+
+// [] tomar agua, [x]cantar, [] andar -> agua n marcado entao falso, dif de true? sim, entao entra como meta aberta. 
+// cantar ta marcado? sim, entao vdd dif de vdd? nao, entao nao entra na lista de metas abertas (fechadas)
+
+
 const start = async () => {
     
 
@@ -86,6 +107,10 @@ const start = async () => {
                         value: "realizadas"
                     },
                     {
+                        name: "Metas abertas",
+                        value: "abertas"
+                    },
+                    {
                         name: "Sair",
                         value: "sair"
                     }
@@ -102,6 +127,9 @@ const start = async () => {
                     break
                 case "realizadas":
                     await metasRealizadas()
+                    break
+                case "abertas":
+                    await metasAbertas()
                     break
                 case "sair":
                     console.log("Até a próxima!")
