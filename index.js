@@ -1,5 +1,7 @@
 const { select, input,checkbox } = require('@inquirer/prompts')
 
+let mensagem = "Bem-vindo ao AppIsa!";
+
 let meta = {
     value: 'Tomar 3L de água por dia',
     checked: false,
@@ -11,13 +13,15 @@ const cadastrarMeta = async () => {
     const meta = await input({ message: "Digite sua meta:"})
 
     if(meta.length == 0) {
-        console.log('A meta não pode ser vazia.')
+        mensagem = 'A meta não pode ser vazia.'
         return //se digitar cadastrarMeta apos return a pessoa fica presa no cadastrar meta ate escrever algo, se n, volta pro menu
     }
 
     metas.push({ 
         value: meta, checked: false } //comeca falsa pq n foi cadastrada ainda
     )
+
+    mensagem = "Meta cadastrada com sucesso!"
 }
 
 const listarMetas = async () => {
@@ -33,7 +37,7 @@ const listarMetas = async () => {
 
 
         if(respostas.length == 0) {
-            console.log("Nenhuma meta selecionada!")
+            mensagem = "Nenhuma meta selecionada!"
             return
         }
 
@@ -46,7 +50,7 @@ const listarMetas = async () => {
             meta.checked = true //true ta funcionando apenas para marcar e se desmarcar, volta a ficar marcado
         } )
 
-        console.log("Meta(s) marcadas como concluída(s)")
+            mensagem = "Meta(s) marcada(s) como concluída(s)"
 
 }
 
@@ -56,7 +60,7 @@ const metasRealizadas = async () => {
     })
 
     if(realizadas.length == 0) {
-        console.log('Não existem metas realizadas :(')
+        mensaggem = 'Não existem metas realizadas :('
         return
     }
 
@@ -72,7 +76,7 @@ const metasAbertas = async () => {
     }) //esse return esta dentro da funcao do filter, a const async n sabe que ela existe
 
     if(abertas.length == 0) {
-        console.log("Não existem metas abertas :)")
+        mensagem = "Não existem metas abertas :)"
         return  
     }
 
@@ -106,9 +110,19 @@ const deletarMetas = async () => {
                                     //vai ser removido da nova lista de metas. so fica na nova lista de metas aquil oque na for marcado
         })
 
-        console.log("Meta(s) deletada(s) com sucesso!")
+        mensagem = "Meta(s) deletada(s) com sucesso!"
 
     })
+}
+
+const mostrarMensagem = () => {
+    console.clear();
+    //limpa as info que aparecia a cada passo = ctrl L no vs code, limpa o caminho
+    if(mensagem != "") {
+        console.log(mensagem)
+        console.log("") //quebra delinha
+        mensagem = "" //dx msg vazia
+    }
 }
 
 
@@ -119,7 +133,8 @@ const start = async () => {
     
 
         while(true){ //fica na opcao pra sempre, infinito pq e sempre verdadeiro
-            
+            mostrarMensagem()
+
             const opcao = await select({ //sempre que usar await a const start tem que ser async
                 message: "Menu >",
                 choices: [
@@ -153,7 +168,6 @@ const start = async () => {
             switch(opcao) {
                 case "cadastrar":
                     await cadastrarMeta()
-                    console.log(metas)
                     break
                 case "listar":
                     await listarMetas()
