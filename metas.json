@@ -10,5 +10,9 @@
   {
     "value": "Andar por 30 minutos todos os dias",
     "checked": false
+  },
+  {
+    "value": "Estudar por 5h todos os dias",
+    "checked": false
   }
 ]
