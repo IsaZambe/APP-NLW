@@ -63,7 +63,13 @@ ACesso a propriedades de objetos
 
 - [x] Importação de modulos (require, CommonsJS)
 - [x] Bibloiteca 'inquirer' para criar prompts interativos
+- [x] modulo fs (file system)
 
+## JSON
+
+-[x] Javascript object notation (.json)
+- [x] JSON.parse() json para js
+- [x] JSON.stringify() js para json
 
 ## Programação assíncronas (async/await) e Promessas
 - sempre que usar await ele aguarda, a funcao se chama promessa (volta com uma resposta)
